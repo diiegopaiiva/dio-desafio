@@ -1,23 +1,20 @@
-const InputPrompt = require("../models/input-prompt")
-const openai = require("../config/openai")
+const InputPrompt = require("../models/input-prompt");
+const HuggingFace = require("../config/huggingface");
 
 module.exports = {
-    async sendText(req, res){
-        const OpenaiAPI = openai.configuration()
-        const imputModel = new InputPrompt(req.body)
+    async sendText(req, res) {
+        const inputModel = new InputPrompt(req.body);
         try {
-            const response = await OpenaiAPI.createCompletion(
-                openai.textCompletion(imputModel)
-            )
+            const responseText = await HuggingFace.getCompletion(inputModel.prompt);
             return res.status(200).json({
-                sucess:true,
-                data: response.data.choices[0].text
-            })
+                success: true,
+                data: responseText
+            });
         } catch (error) {
             return res.status(400).json({
-                sucess:false,
-                error: error.response ? error.response : "there was an inssue on the server"
-            })
+                success: false,
+                error: error.message || "Houve um problema no servidor"
+            });
         }
     }
 }
