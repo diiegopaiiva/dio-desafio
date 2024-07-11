@@ -1,0 +1,149 @@
+/* Estilos para o body e html */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F5E6FE;
+}
+
+/* Estilos para o header */
+header {
+    background-color: #F5E6FE;
+}
+
+/* Estilos para a barra de navegação */
+ul {
+    list-style: none;
+    padding-left: 5px;
+}
+
+/* Estilos para links */
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+/* Estilos para barras de separação */
+.bar {
+    border-bottom: solid 1px #cdcdcd;
+}
+
+/* Estilos para o conteúdo principal */
+.content {
+    max-width: 1440px;
+    margin: auto;
+    grid-gap: 3rem;
+    display: grid;
+    gap: 3rem;
+    grid-template-areas: "sidebar main anchors";
+    grid-template-columns: minmax(0, 15rem) minmax(0, 2.5fr) minmax(0, 15rem);
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Estilos para a coluna de âncoras */
+.anchors {
+    border-left: solid 1px #cdcdcd;
+}
+
+/* Estilos para a barra lateral */
+.sidebar {
+    border-right: solid 1px #cdcdcd;
+}
+
+/* Estilos para centralizar texto */
+.center {
+    text-align: center;
+}
+
+/* Estilos para justificar texto */
+.justificar {
+    text-align: justify;
+}
+
+/* Estilos para alinhar à esquerda */
+.esquerda {
+    text-align: left;
+}
+
+/* Estilos para imagens flutuantes */
+.img1,
+.img2 {
+    margin: 10px 0;
+    vertical-align: middle;
+    margin: 0.5em 1.3em 0em 0;
+    clear: left;
+    float: left;
+    display: table;
+    text-align: center;
+    border-collapse: collapse;
+    line-height: 0;
+}
+
+.img2 {
+    margin: 0.5em 0em 0em 1.3em;
+    clear: right;
+    float: right;
+}
+
+/* Estilos para imagens fixas */
+.fixo {
+    position: relative;
+}
+
+.imagem-lateral {
+    position: fixed;
+    top: 0;
+    width: 200px;
+    height: auto;
+}
+
+.imagem-lateral.esquerda {
+    left: 0;
+}
+
+.imagem-lateral.direita {
+    right: 0;
+}
+
+/* Estilos para o footer */
+footer {
+    border-top: solid 1px #cdcdcd;
+    padding: 20px 0;
+}
+
+/* Estilos para o wrapper do footer */
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Estilos para parágrafos dentro do wrapper */
+.wrapper p {
+    margin-bottom: 10px;
+}
+
+/* Estilos para listas dentro do wrapper */
+.wrapper ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Estilos para itens de lista dentro do wrapper */
+.wrapper ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Estilos para links dentro do wrapper */
+.wrapper ul li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+/* Estilos para links hover dentro do wrapper */
+.wrapper ul li a:hover {
+    text-decoration: underline;
+}
